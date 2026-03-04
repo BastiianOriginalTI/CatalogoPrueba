@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Tienda Digno - Linares</title>
+<link rel="stylesheet" href="assets/css/styles.css">
+</head>
+
+<body>
+<header>
+    <h1>Tienda Digno</h1>
+    <p>Linares</p>
+    <p class="direccion">Dirección física aquí - Linares</p>
+</header>
+
+<section class="productos">
+<div class="card">
+    <img src="assets/img/taladro.webp" alt="Taladro Percutor 650W">
+    <h3>Taladro Percutor 650W</h3>
+    <p class="precio">$39.990</p>
+    <button onclick="enviarWhatsApp('Taladro Percutor 650W','$39.990','HER-01')">
+    Consultar por WhatsApp
+    </button>
+</div>
+<div class="card">
+    <img src="assets/img/sarten.avif" alt="Sarten">
+    <h3>Sarten acero inoxidable</h3>
+    <p class="precio">$17.990</p>
+    <button onclick="enviarWhatsApp('Sarten acero inoxidable','$17.990','HOG-01')">
+    Consultar por WhatsApp
+    </button>
+</div>
+<div class="card">
+    <img src="assets/img/Motosierra.png" alt="Motosierra">
+    <h3>Motosierra 52cc</h3>
+    <p class="precio">$89.990</p>
+    <button onclick="enviarWhatsApp('Motosierra 52cc','$89.990','HER-02')">
+    Consultar por WhatsApp
+    </button>
+</div>
+<div class="card">
+    <img src="assets/img/moto.webp" alt="Motocicleta">
+    <h3>Motocicleta </h3>
+    <p class="precio">$1.299.990</p>
+    <button onclick="enviarWhatsApp('Motocicleta 150cc','$1.299.990','HER-03')">
+    Consultar por WhatsApp
+    </button>
+</div>
+<div class="card">
+    <img src="assets/img/aspiradora.webp" alt="Aspiradora">
+    <h3>Aspiradora 1200W</h3>
+    <p class="precio">$49.990</p>
+    <button onclick="enviarWhatsApp('Aspiradora 1200W','$49.990','HOG-02')">
+    Consultar por WhatsApp
+    </button>
+</section>
+
+<script>
+function enviarWhatsApp(nombre, precio, codigo) {
+    const numero = "56949461990"; // Reemplazar por número real
+    const mensaje = `Hola 👋 Vi este producto en el catálogo online de Tienda Digno (Linares):
+📦 Producto: ${nombre}
+💰 Precio: ${precio}
+🔖 Código: ${codigo}
+¿Está disponible en tienda?`;
+
+    const url = `https://wa.me/${numero}?text=${encodeURIComponent(mensaje)}`;
+    window.open(url, '_blank');
+}
+</script>
+</body>
+</html>
